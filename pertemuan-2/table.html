@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Tugas Tabel</title>
+      <style>
+         table,
+         th,
+         td {
+            border: 1px solid black;
+            border-collapse: collapse;
+         }
+         table {
+            width: 25%;
+         }
+
+         th,
+         td {
+            padding: 15px;
+         }
+      </style>
+   </head>
+   <body>
+      <table>
+         <thead>
+            <tr>
+               <th rowspan="2">No</th>
+               <th colspan="2">Biodata</th>
+            </tr>
+            <tr>
+               <th>Nama</th>
+               <th>Alamat</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>1</td>
+               <td>Budi</td>
+               <td rowspan="2">Yogyakarta</td>
+            </tr>
+            <tr>
+               <td>2</td>
+               <td>Yanto</td>
+            </tr>
+            <tr>
+               <td>3</td>
+               <td>Ani</td>
+               <td>Surakarta</td>
+            </tr>
+            <tr>
+               <td>4</td>
+               <td>Bahrun</td>
+               <td>Karanganyar</td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>
