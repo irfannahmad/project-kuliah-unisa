@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Praktikum 2</title>
+      <style>
+         table {
+            width: 100%;
+         }
+         th,
+         tr,
+         td {
+            padding: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>A. HTML</h1>
+      <p>
+         <strong>HTML</strong> (Hyper Text Markup Language) adalah format bahasa
+         yang digunakan untuk membuat halaman Website. HTML mendeskripsikan
+         struktur dari suatu halaman web yang terdiri dari beberapa elemen.
+         Contoh dokumen HTML sederhana ditunjukkan pada <b>Gambar 1.</b>
+      </p>
+      <br />
+      <img src="./img/code.png" alt="Code" width="300px" height="325px" />
+      <br />
+      <h3>Gambar 1. Contoh Sederhana Kode HTML</h3>
+      <br />
+      <h2>Silahkan isi data anda disini</h2>
+      <form>
+         <label for="ndepan">Nama Depan</label>
+         <br />
+         <input type="text" name="ndepan" id="ndepan" />
+         <br />
+         <label for="nbelakang">Nama Belakang</label>
+         <br />
+         <input type="text" name="nbelakang" id="nbelakang" />
+         <br />
+         <br />
+         <label for="kelamin">Jenis Kelamin : </label>
+         <select>
+            <option>Pria</option>
+            <option>Wanita</option>
+         </select>
+         <br />
+         <br />
+         <input type="button" value="Submit" />
+         <br />
+         <br />
+         <h2>Data yang masuk</h2>
+         <table>
+            <thead>
+               <tr>
+                  <th style="background-color: grey">Nama Depan</th>
+                  <th style="background-color: grey">Nama Belakang</th>
+                  <th style="background-color: green">Jenis Kelamin</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td style="background-color: grey">Dan</td>
+                  <td style="background-color: grey">Setya</td>
+                  <td style="background-color: green">Pria</td>
+               </tr>
+               <tr>
+                  <td style="background-color: grey">Budi</td>
+                  <td style="background-color: grey">Gayu</td>
+                  <td style="background-color: green">Pria</td>
+               </tr>
+               <tr>
+                  <td style="background-color: grey">Ani</td>
+                  <td style="background-color: grey">Sarah</td>
+                  <td style="background-color: green">Wanita</td>
+               </tr>
+            </tbody>
+         </table>
+      </form>
+   </body>
+</html>
