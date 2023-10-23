@@ -17,6 +17,8 @@ const setError = (element, message) => {
    errorDisplay.innerText = message;
    inputControl.classList.add("error");
    inputControl.classList.remove("success");
+
+   alert(message);
 };
 
 const setSuccess = (element) => {
