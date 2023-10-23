@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+   <header>
+      <title>Tugas Praktikum 2</title>
+   </header>
+   <style>
+      p {
+         color: lightskyblue;
+      }
+   </style>
+   <link rel="stylesheet" href="./style-index.css" />
+   <body>
+      <nav>
+         <a href="">Dashboard</a> | <a href="">HTML</a> |
+         <a href="">JavaScript</a> |
+         <a href="">jQuery</a>
+      </nav>
+
+      <aside>
+         <h4>Javascript</h4>
+         <p>
+            JavaScript adalah bahasa pemrograman yang populer di internet.
+            Fungsi JavaScript pada HTML membuat halaman web lebih interaktif.
+            JavaScript merupakan bahasa pemrograman paling populer di dunia
+         </p>
+      </aside>
+
+      <section style="background-color: darkblue; opacity: 75%">
+         <h2>A. HTML</h2>
+         <p>
+            <b>HTML</b> (<i>Hyper Text Markup Language</i>) adalah format bahasa
+            yang digunakan untuk membuat halaman Website. HTML mendeskripsikan
+            struktur dari suatu halaman web yang terdiri dari beberapa elemen.
+            Contoh dokumen HTML sederhana ditunjukkan pada <b>Gambar 1</b>.
+         </p>
+
+         <figure>
+            <img src="gambar1.png" />
+            <figcaption><b>Gambar 1. Contoh Sederhana Kode HTML</b></figcaption>
+         </figure>
+         <br /><br />
+         <h3>Silahkan data anda disini</h3>
+         <form action="">
+            <label for="fname">Nama Depan</label><br />
+            <input type="text" id="fname" name="fname" value="John" /><br />
+            <label for="lname">Nama Belakang</label><br />
+            <input
+               type="text"
+               id="lname"
+               name="lname"
+               value="Doe"
+            /><br /><br />
+            <label for="cars">Jenis Kelamin : </label>
+            <select id="cars" name="carlist" form="carform">
+               <option value="volvo">Pria</option>
+               <option value="saab">Wanita</option>
+            </select>
+            <br /><br />
+            <input type="submit" value="Submit" />
+         </form>
+
+         <h3>Data yang masuk</h3>
+         <table style="width: 50%">
+            <colgroup>
+               <col span="2" style="background-color: grey" />
+               <col style="background-color: green" />
+            </colgroup>
+            <tr>
+               <th>Nama Depan</th>
+               <th>Nama Belakang</th>
+               <th>Jenis Kelamin</th>
+            </tr>
+            <tr>
+               <td>Dan</td>
+               <td>Budi</td>
+               <td>Ani</td>
+            </tr>
+            <tr>
+               <td>Setya</td>
+               <td>Sarah</td>
+               <td>Gayu</td>
+            </tr>
+            <tr>
+               <td>Pria</td>
+               <td>Pria</td>
+               <td>Wanita</td>
+            </tr>
+         </table>
+      </section>
+
+      <article>
+         <h4>
+            HTML 5 dapat menampilkan video dan audio pada website tanpa
+            menggunakan plugin
+         </h4>
+         <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/3rmhIhvlgx0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+         ></iframe>
+      </article>
+
+      <article>
+         <audio controls>
+            <source src="dota2.mp3" type="audio/ogg" />
+            Your browser does not support the audio element.
+         </audio>
+      </article>
+
+      <footer>
+         <p>Author: Danur Wijayanto</p>
+      </footer>
+   </body>
+</html>
