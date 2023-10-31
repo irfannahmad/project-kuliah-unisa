@@ -1,43 +1,48 @@
-$(document).ready(function () {
-   $("#form").submit(function (event) {
-      event.preventDefault();
+const form = document.getElementById("form");
+const username = document.getElementById("username");
+const alamat = document.getElementById("alamat");
+const umur = document.getElementById("umur");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const password2 = document.getElementById("password2");
 
-      var usernameValue = $("#username").val();
-      var alamatValue = $("#alamat").val();
-      var umurValue = $("#umur").val();
-      var emailValue = $("#email").val();
-      var passwordValue = $("#password").val();
-      var password2Value = $("#password2").val();
+form.addEventListener("submit", function (event) {
+   event.preventDefault();
 
-      if (usernameValue === "") {
-         alert("Silahkan masukkan username anda!");
-         return;
-      }
+   if (username.value === "") {
+      alert("Silahkan masukkan username anda!");
+      return;
+   }
 
-      var emailPattern = /\S+@\S+\.\S+/;
+   const emailValue = email.value;
+   const emailPattern = /\S+@\S+\.\S+/;
 
-      if (!emailPattern.test(emailValue)) {
-         alert("Mohon masukkan alamat email yang valid!");
-         return;
-      }
+   if (!emailPattern.test(emailValue)) {
+      alert("Mohon masukkan alamat email yang valid!");
+      return;
+   }
 
-      if (emailValue === "") {
-         alert("Silahkan masukkan email anda!");
-         return;
-      }
+   if (email.value === "") {
+      alert("Silahkan masukkan email anda!");
+      return;
+   }
 
-      if (passwordValue === "") {
-         alert("Silahkan masukkan password anda!");
-         return;
-      }
+   if (password.value === "") {
+      alert("Silahkan masukkan password anda!");
+      return;
+   }
 
-      if (password2Value !== passwordValue) {
-         alert("Konfirmasi password harus sama dengan password sebelumnya!");
-         return;
-      }
+   if (password2.value !== password.value) {
+      alert("Konfirmasi password harus sama dengan password sebelumnya!");
+      return;
+   }
 
-      alert("Data berhasil ditambahkan");
+   alert("Data berhasil ditambahkan");
 
-      $("#username, #alamat, #umur, #email, #password, #password2").val("");
-   });
+   username.value = "";
+   alamat.value = "";
+   umur.value = "";
+   email.value = "";
+   password.value = "";
+   password2.value = "";
 });
