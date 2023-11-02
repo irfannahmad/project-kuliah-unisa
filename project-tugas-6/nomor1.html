@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>JQuery</title>
+      <link rel="stylesheet" href="./style.css" />
+      <script src="./jquery.js"></script>
+   </head>
+   <body>
+      <h1>Praktikum 5 | JQuery | Nomor 1</h1>
+      <button id="tombol">Click Me!</button>
+      <div class="box"></div>
+      <script>
+         $(document).ready(function () {
+            let clickCount = 0;
+
+            $("#tombol").click(function () {
+               clickCount++;
+
+               if (clickCount === 2) {
+                  $(".box").toggle();
+                  clickCount = 0;
+               }
+            });
+         });
+      </script>
+   </body>
+</html>

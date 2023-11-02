@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>mousedown()</title>
+      <script src="../jquery.js"></script>
+   </head>
+   <body>
+      <h1>EVENT 2 | mousedown()</h1>
+      <p>
+         Jika kamu klik saya menggunakan klik kiri, klik tengah, atau klik
+         kanan, maka saya akan muncul alert
+      </p>
+      <script>
+         $(document).ready(function () {
+            $("p").mousedown(function () {
+               alert("Kamu nge-klik saya ya?");
+            });
+         });
+      </script>
+   </body>
+</html>

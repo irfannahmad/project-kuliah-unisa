@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>dblclick()</title>
+      <script src="../jquery.js"></script>
+   </head>
+   <body>
+      <h1>EVENT 1 | dblclick()</h1>
+      <p>Jika kamu klik saya dua kali, maka saya akan menghilang</p>
+      <script>
+         $(document).ready(function () {
+            $("p").dblclick(function () {
+               $(this).hide();
+            });
+         });
+      </script>
+   </body>
+</html>

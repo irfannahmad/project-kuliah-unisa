@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>mouseup()</title>
+      <script src="../jquery.js"></script>
+   </head>
+   <body>
+      <h1>EVENT 5 | mouseup()</h1>
+      <p>
+         Jika kamu klik saya menggunakan klik kiri, klik tengah, atau klik
+         kanan, maka saya akan muncul alert, hampir mirip dengan mousedown
+         tetapi ada perbedaan, kalau mousedown diklik langsung memberikan efek
+         misal alert, sedangkan mouseup jika diklik namun belum dilepaskan maka
+         tidak akan memberikan efek
+      </p>
+      <script>
+         $(document).ready(function () {
+            $("p").mouseup(function () {
+               alert("Kamu baru saja nge-klik aku ya");
+            });
+         });
+      </script>
+   </body>
+</html>

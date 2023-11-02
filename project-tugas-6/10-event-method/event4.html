@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>mouseleave()</title>
+      <script src="../jquery.js"></script>
+   </head>
+   <body>
+      <h1>EVENT 4 | mouseleave()</h1>
+      <p>
+         Jika kusor kamu berada diatasa teks-ku dan kemudian kamu melewati
+         teks-ku, nanti akan ada alert yang mucul
+      </p>
+      <script>
+         $(document).ready(function () {
+            $("p").mouseleave(function () {
+               alert("Kamu baru saja melewati teks-ku");
+            });
+         });
+      </script>
+   </body>
+</html>

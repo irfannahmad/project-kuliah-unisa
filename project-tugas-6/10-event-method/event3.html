@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>mouseenter()</title>
+      <script src="../jquery.js"></script>
+   </head>
+   <body>
+      <h1>EVENT 3 | mouseenter()</h1>
+      <p>
+         Jika kusor kamu berada diatasa teks-ku, nanti akan ada alert yang mucul
+      </p>
+      <script>
+         $(document).ready(function () {
+            $("p").mouseenter(function () {
+               alert("Kamu baru saja menyentuh teks-ku");
+            });
+         });
+      </script>
+   </body>
+</html>
