@@ -18,7 +18,7 @@ body {
 
 #form h1 {
    color: #0f2027;
-   text-align: center;
+   /* text-align: center; */
 }
 
 #form button {
@@ -50,7 +50,7 @@ body {
    border-radius: 4px;
    cursor: pointer;
 }
-
+/*
 .input-control {
    display: flex;
    flex-direction: column;
@@ -86,4 +86,4 @@ body {
 
 .input-control textarea:focus {
    outline: 0;
-}
+} */

@@ -8,14 +8,46 @@
       <link rel="stylesheet" href="./style.css" />
    </head>
    <body>
-      <div>
-         <form action="/" id="form">
-            <h1 class="h3">Form Registrasi</h1>
-            <div class="input-control">
+      <header
+         class="d-flex flex-wrap justify-content-center py-3 mb-4 ms-5 me-5 border-bottom"
+      >
+         <a
+            href="/"
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+         >
+            <span class="fs-4 text-light">KELOMPOK 7</span>
+         </a>
+
+         <ul class="nav nav-pills">
+            <li class="nav-item">
+               <a href="#" class="btn btn-danger" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item">
+               <a href="#" class="nav-link text-light">Features</a>
+            </li>
+            <li class="nav-item">
+               <a href="#" class="nav-link text-light">Pricing</a>
+            </li>
+            <li class="nav-item">
+               <a href="#" class="nav-link text-light">FAQs</a>
+            </li>
+            <li class="nav-item">
+               <a href="#" class="nav-link text-light">About</a>
+            </li>
+         </ul>
+      </header>
+      <div class="d-flex justify-content-center mx-auto">
+         <form
+            action="/"
+            id="form"
+            class="d-flex justify-content-center flex-column mb-3"
+         >
+            <h1 class="h3 text-center">Form Registrasi</h1>
+            <div class="input-control d-flex flex-column mb-3 m-1">
                <label for="username">Nama</label>
-               <input type="text" id="username" name="username" />
+               <input type="text" id="username" name="username" class="p-1" />
             </div>
-            <div class="input-control">
+            <div class="input-control d-flex flex-column mb-3 m-1">
                <label for="alamat">Alamat</label>
                <textarea
                   name="alamat"
@@ -23,27 +55,70 @@
                   cols="50"
                   rows="5"
                   style="resize: none"
+                  class="p-1"
                ></textarea>
             </div>
-            <div class="input-control">
+            <div class="input-control d-flex flex-column mb-3 m-1">
                <label for="umur">Umur</label>
-               <input type="number" id="umur" name="umur" />
+               <input type="number" id="umur" name="umur" class="p-1" />
             </div>
-            <div class="input-control">
+            <div class="input-control d-flex flex-column mb-3 m-1">
                <label for="email">Email</label>
-               <input type="text" id="email" name="email" />
+               <input type="text" id="email" name="email" class="p-1" />
             </div>
-            <div class="input-control">
+            <div class="input-control d-flex flex-column mb-3 m-1">
                <label for="password">Password</label>
-               <input type="password" id="password" name="password" />
+               <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="p-1"
+               />
             </div>
-            <div class="input-control">
+            <div class="input-control d-flex flex-column mb-3 m-1">
                <label for="password2">Konfirmasi Password</label>
-               <input type="password" id="password2" name="password2" />
+               <input
+                  type="password"
+                  id="password2"
+                  name="password2"
+                  class="p-1"
+               />
             </div>
-            <button type="submit">Simpan</button>
+            <button type="submit" class="p-2 m-1">Simpan</button>
          </form>
       </div>
+      <footer
+         class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 ms-5 me-5 border-top"
+      >
+         <p class="col-md-4 mb-0 text-light">Kelompok 7</p>
+
+         <a
+            href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+         >
+            <svg class="bi me-2" width="40" height="32">
+               <use xlink:href="#bootstrap"></use>
+            </svg>
+         </a>
+
+         <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item">
+               <a href="#" class="nav-link px-2 text-light">Home</a>
+            </li>
+            <li class="nav-item">
+               <a href="#" class="nav-link px-2 text-light">Features</a>
+            </li>
+            <li class="nav-item">
+               <a href="#" class="nav-link px-2 text-light">Pricing</a>
+            </li>
+            <li class="nav-item">
+               <a href="#" class="nav-link px-2 text-light">FAQs</a>
+            </li>
+            <li class="nav-item">
+               <a href="#" class="nav-link px-2 text-light">About</a>
+            </li>
+         </ul>
+      </footer>
       <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
       <script src="./script.js"></script>
    </body>
