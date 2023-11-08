@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>keydown()</title>
+      <script src="../jquery.js"></script>
+   </head>
+   <body>
+      <h1>EVENT 9 | keydown()</h1>
+      <p>Event ini bekerja ketika tombol pada keyboard ditekan.</p>
+      Nama : <input type="text" /> NIM : <input type="text" />
+      <script>
+         $(document).ready(function () {
+            $("input").keydown(function () {
+               alert("Anda menekan tombol!");
+            });
+         });
+      </script>
+   </body>
+</html>

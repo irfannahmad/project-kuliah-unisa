@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>focus() & blur()</title>
+      <script src="../jquery.js"></script>
+   </head>
+   <body>
+      <h1>EVENT 7 & 8 | focus() & blur()</h1>
+      <p>
+         events focus akan bekerja ketika kita melakukan klik pada textfield
+         sedangkan events blur akan bekerja ketika kita keluar dari textfield
+      </p>
+      Nama : <input type="text" /> NIM : <input type="text" />
+      <script>
+         $(document).ready(function () {
+            $("input").focus(function () {
+               $(this).css("background-color", "yellow");
+            });
+            $("input").blur(function () {
+               $(this).css("background-color", "limegreen");
+            });
+         });
+      </script>
+   </body>
+</html>
