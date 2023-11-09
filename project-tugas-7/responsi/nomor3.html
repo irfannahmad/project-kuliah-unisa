@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Galeri Gambar Sederhana</title>
+   </head>
+   <body>
+      <div id="galeri"></div>
+      <h1>Galeri Gambar Sederhana</h1>
+      <img src="./img/1.jpg" id="img" />
+      <br />
+      <button onclick="myImages()">Sebelumnya</button>
+      <button onclick="myImages()">Selanjutnya</button>
+
+      <script src="./jquery.js"></script>
+      <script>
+         let images = [
+            "./img/1.jpg",
+            "./img/2.jpg",
+            "./img/3.jpg",
+            "./img/4.jpg",
+            "./img/5.jpg",
+         ];
+
+         function myImages() {
+            document.getElementById("img").src = images[2];
+         }
+      </script>
+   </body>
+</html>

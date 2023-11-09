@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Formulir Validasi Sederhana</title>
+      <link rel="stylesheet" href="./style4.css" />
+   </head>
+   <body>
+      <div class="container">
+         <div class="form">
+            <h1>Formulir Validasi Sederhana</h1>
+
+            <form id="my-form">
+               <label for="nama">Nama : </label>
+               <input type="text" name="nama" id="nama" />
+               <label for="email">Email : </label>
+               <input type="email" name="email" id="email" />
+               <label for="password">Password : </label>
+               <input type="password" name="password" id="password" />
+               <button type="submit">Submit</button>
+            </form>
+         </div>
+      </div>
+
+      <script src="./jquery.js"></script>
+      <script>
+         $(document).ready(function () {
+            $("#my-form").submit(function (event) {
+               var nama = $("#nama").val();
+               var email = $("#email").val();
+               var password = $("#password").val();
+
+               if (nama === "") {
+                  alert("Nama tidak boleh kosong!");
+                  event.preventDefault();
+               }
+
+               if (email === "" || email.includes("@")) {
+                  alert("Email harus diisi dengan benar!");
+                  event.preventDefault();
+               }
+
+               if (password === "" || password.length < 6) {
+                  alert("Password harus diisi dengan minimal 6 karakter");
+                  event.preventDefault();
+               }
+            });
+         });
+      </script>
+   </body>
+</html>
