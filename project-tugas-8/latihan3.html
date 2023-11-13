@@ -4,12 +4,46 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Latihan 3</title>
+      <link rel="stylesheet" href="./css/bootstrap.css" />
    </head>
    <body>
       <div class="container-fluid">
          <h1>Website Pertamaku</h1>
          <p>Dengan Bootstrap proses layout laman web jadi lebih cepat</p>
       </div>
-      <div class="container"></div>
+      <div class="container">
+         <h1>Form Vertikal</h1>
+         <form action="">
+            <div class="form-group">
+               <label for="email">Email</label>
+               <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Enter Email"
+               />
+            </div>
+            <div class="form-group">
+               <label for="password">Password</label>
+               <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control"
+                  placeholder="Enter password"
+               />
+            </div>
+            <div class="checkbox">
+               <label for="">
+                  <input type="checkbox" name="checkbox" id="checkbox" />
+                  Remember Me
+               </label>
+            </div>
+            <button type="button" class="btn btn-primary btn-sm">Submit</button>
+         </form>
+      </div>
    </body>
+   <script src="./js/jquery.js"></script>
+   <script src="./js/bootstrap.js"></script>
 </html>
