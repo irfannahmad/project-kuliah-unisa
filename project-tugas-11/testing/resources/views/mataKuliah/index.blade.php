@@ -23,20 +23,33 @@
                 </tr>
             </thead>
             <tbody>
+                @php
+                $i = 1;
+                @endphp
+
                 @foreach ($matakuliah as $matkul)
                 <tr>
-                    <td>1</td>
-                    <td>{{ $matkul->nama_matakuliah }}</td>
+                    <td>{{ $i }}</td>
+                    <td>{{ $matkul->mata_kuliah }}</td>
                     <td>{{ $matkul->kelas }}</td>
                     <td>{{ $matkul->jurusan }}</td>
                     <td>{{ $matkul->nama_dosen }}</td>
                     <td>{{ $matkul->jumlah_sks }}</td>
                     <td>
-                        <a href="{{ route('mataKuliah.edit') }}" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Hapus</a>
+                        <a href="{{ route('mataKuliah.edit', $matkul->id) }}" class="btn btn-primary">Edit</a>
+                        <!-- Tambahkan form untuk delete -->
+                        <form action="{{ route('mataKuliah.destroy', $matkul->id) }}" method="POST" style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin untuk menghapus?')">Hapus</button>
+                        </form>
                     </td>
                 </tr>
+                @php
+                $i++;
+                @endphp
                 @endforeach
+
             </tbody>
         </table>
     </div>

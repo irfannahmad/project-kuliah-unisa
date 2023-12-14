@@ -58,11 +58,13 @@ class MataKuliahController extends Controller
         return redirect()->route('mataKuliah.index')->with('success', 'Data berhasil diperbarui!');
     }
 
+
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(mataKuliah $mataKuliah)
     {
-        //
+        $mataKuliah->delete();
+        return redirect()->route('mataKuliah.index')->with('success', 'Data berhasil dihapus!');
     }
 }
