@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\mataKuliah;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -11,7 +12,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $matakuliah = mataKuliah::all();
+        return view('dashboard', compact('matakuliah'));
     }
 
     /**
@@ -43,15 +45,16 @@ class DashboardController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('edit', compact('mataKuliah'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, mataKuliah $mataKuliah)
     {
-        //
+        $mataKuliah->update($request->all());
+        return redirect()->route('dashboard')->with('success', 'Data berhasil diperbarui!');
     }
 
     /**
