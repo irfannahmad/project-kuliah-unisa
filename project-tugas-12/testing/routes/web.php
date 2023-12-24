@@ -21,10 +21,12 @@ Route::get('/mataKuliah', function () {
 Route::post('/mataKuliah', [MataKuliahController::class, 'store'])->name('mataKuliah');
 Route::get('/data-matakuliah', [MataKuliahController::class, 'index'])->name('mataKuliah.index');
 Route::get('/mataKuliah/{mataKuliah}/edit', [MataKuliahController::class, 'edit'])->name('mataKuliah.edit');
-Route::get('/mataKuliah/{mataKuliah}/edit', [MataKuliahController::class, 'edit'])->name('mataKuliah.edit');
 Route::put('/mataKuliah/{mataKuliah}', [MataKuliahController::class, 'update'])->name('mataKuliah.update');
 Route::delete('/mataKuliah/{mataKuliah}', [MataKuliahController::class, 'destroy'])->name('mataKuliah.destroy');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::get('/dashboard/{dashboard}/edit', [DashboardController::class, 'edit'])->name('dashboard.edit');
-Route::put('/dashboard/{dashboard}', [DashboardController::class, 'update'])->name('dashboard.update');
+Route::get('/dashboard/create', [DashboardController::class, 'create'])->name('dashboard.create');
+Route::post('/dashboard', [DashboardController::class, 'store'])->name('dashboard');
+Route::get('/dashboard/{mataKuliah}/edit', [DashboardController::class, 'edit'])->name('dashboard.edit');
+Route::put('/dashboard/{mataKuliah}', [DashboardController::class, 'update'])->name('dashboard.update');
+Route::delete('/dashboard/{mataKuliah}', [DashboardController::class, 'destroy'])->name('dashboard.destroy');

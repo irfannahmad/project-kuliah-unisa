@@ -16,6 +16,7 @@
 <section class="content">
     <div class="container mb-3">
         <table class="table table-striped">
+            <a href="{{ route('dashboard.create') }}" class="btn btn-primary mb-2">Tambah Data</a>
             <thead>
                 <tr>
                     <th scope="col">No</th>
@@ -24,6 +25,7 @@
                     <th scope="col">Jurusan</th>
                     <th scope="col">Nama Dosen</th>
                     <th scope="col">SKS</th>
+                    <th scope="col">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,7 +44,7 @@
                     <td>
                         <a href="{{ route('dashboard.edit', $matkul->id) }}" class="btn btn-primary">Edit</a>
                         <!-- Tambahkan form untuk delete -->
-                        <form action="{{ route('mataKuliah.destroy', $matkul->id) }}" method="POST" style="display: inline;">
+                        <form action="{{ route('dashboard.destroy', $matkul->id) }}" method="POST" style="display: inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin untuk menghapus?')">Hapus</button>

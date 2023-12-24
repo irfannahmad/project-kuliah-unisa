@@ -21,7 +21,7 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        //
+        return view('tambah');
     }
 
     /**
@@ -29,7 +29,8 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        mataKuliah::create($request->all());
+        return redirect()->route('dashboard');
     }
 
     /**
@@ -43,7 +44,7 @@ class DashboardController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(mataKuliah $mataKuliah)
     {
         return view('edit', compact('mataKuliah'));
     }
@@ -60,8 +61,9 @@ class DashboardController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(mataKuliah $mataKuliah)
     {
-        //
+        $mataKuliah->delete();
+        return redirect()->route('dashboard')->with('success', 'Data berhasil dihapus!');
     }
 }
