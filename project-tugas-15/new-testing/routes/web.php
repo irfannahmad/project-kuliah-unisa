@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Mahasiswa;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MataKuliahController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,3 +33,10 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/postLogin', [AuthController::class, 'postLogin'])->name('postLogin')->middleware('throttle:login');
+
+Route::get('/data-mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa');
+Route::get('/create-mahasiswa', [MahasiswaController::class, 'create'])->name('mahasiswa.create');
+Route::get('/store-mahasiswa', [MahasiswaController::class, 'store'])->name('mahasiswa.store');
+Route::get('/edit-mahasiswa/{id}', [MahasiswaController::class, 'edit'])->name('mahasiswa.store');
+Route::get('/update-mahasiswa/{id}', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
+Route::get('/delete-mahasiswa/{id}', [MahasiswaController::class, 'delete'])->name('mahasiswa.delete');
