@@ -29,6 +29,20 @@ class MataKuliahController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nama_mata_kuliah' => 'required',
+            'kelas' => 'required',
+            'jurusan' => 'required',
+            'nama_dosen' => 'required',
+            'jumlah_sks' => 'required',
+        ], [
+            'nama_mata_kuliah.required' => 'Nama Mata Kuliah tidak boleh kosong!',
+            'kelas.required' => 'Kelas tidak boleh kosong!',
+            'jurusan.required' => 'Jurusan tidak boleh kosong!',
+            'nama_dosen.required' => 'Dosen tidak boleh kosong!',
+            'jumlah_sks.required' => 'Jumlah SKS tidak boleh kosong!',
+        ]);
+
         mataKuliah::create($request->all());
         return redirect()->route('matakuliah.index');
     }

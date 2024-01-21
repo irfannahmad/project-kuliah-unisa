@@ -16,16 +16,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/matakuliah', function () {
-    return view('matakuliah.create');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/matakuliah', function () {
+        return view('matakuliah.create');
+    });
+    Route::post('/matakuliah', [MataKuliahController::class, 'store'])->name('matakuliah');
+    Route::get('/data-matakuliah', [MataKuliahController::class, 'index'])->name('matakuliah.index');
+    Route::get('/matakuliah/{matakuliah}/edit', [MataKuliahController::class, 'edit'])->name('matakuliah.edit');
+    Route::put('/matakuliah/{matakuliah}', [MataKuliahController::class, 'update'])->name('matakuliah.update');
+    Route::delete('/matakuliah/{matakuliah}', [MataKuliahController::class, 'destroy'])->name('matakuliah.destroy');
 });
-Route::post('/matakuliah', [MataKuliahController::class, 'store'])->name('matakuliah');
-Route::get('/data-matakuliah', [MataKuliahController::class, 'index'])->name('matakuliah.index');
-Route::get('/matakuliah/{matakuliah}/edit', [MataKuliahController::class, 'edit'])->name('matakuliah.edit');
-Route::put('/matakuliah/{matakuliah}', [MataKuliahController::class, 'update'])->name('matakuliah.update');
-Route::delete('/matakuliah/{matakuliah}', [MataKuliahController::class, 'destroy'])->name('matakuliah.destroy');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::get('/', [AuthController::class, 'login'])->name('login');
-Route::post('/', [AuthController::class, 'postLogin'])->name('postlogin');
+Route::post('/postLogin', [AuthController::class, 'postLogin'])->name('postLogin')->middleware('throttle:login');

@@ -15,7 +15,7 @@
         @method('PUT')
         <div class="form-group mb-2">
             <label for="mataKuliah">Mata Kuliah : </label>
-            <input type="text" name="mata_kuliah" id="mataKuliah" class="form-control" value="{{ $mataKuliah->nama_mata_kuliah }}">
+            <input type="text" name="nama_mata_kuliah" id="mataKuliah" class="form-control" value="{{ $mataKuliah->nama_mata_kuliah }}">
         </div>
         <div class="form-group mb-2">
             <label for="kelas">Kelas : </label>

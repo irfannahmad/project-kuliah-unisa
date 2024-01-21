@@ -73,23 +73,38 @@
                 @csrf
                 <div class="form-group mb-2">
                     <label for="mataKuliah">Mata Kuliah : </label>
-                    <input type="text" name="nama_mata_kuliah" id="mataKuliah" class="form-control">
+                    <input type="text" name="nama_mata_kuliah" id="mataKuliah" class="form-control @error('nama_mata_kuliah') is-invalid @enderror" value="{{ old('nama_mata_kuliah') }}">
+                    @error('nama_mata_kuliah')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group mb-2">
                     <label for="kelas">Kelas : </label>
-                    <input type="text" name="kelas" id="kelas" class="form-control">
+                    <input type="text" name="kelas" id="kelas" class="form-control @error('kelas') is-invalid @enderror" value="{{ old('kelas') }}">
+                    @error('kelas')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group mb-2">
                     <label for="jurusan">Jurusan : </label>
-                    <input type="text" name="jurusan" id="jurusan" class="form-control">
+                    <input type="text" name="jurusan" id="jurusan" class="form-control @error('jurusan') is-invalid @enderror" value="{{ old('jurusan') }}">
+                    @error('jurusan')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group mb-2">
                     <label for="namaDosen">Nama Dosen : </label>
-                    <input type="text" name="nama_dosen" id="namaDosen" class="form-control">
+                    <input type="text" name="nama_dosen" id="namaDosen" class="form-control @error('nama_dosen') is-invalid @enderror" value="{{ old('nama_mata_kuliah') }}">
+                    @error('nama_dosen')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group mb-2">
                     <label for="sks">SKS : </label>
-                    <input type="text" name="jumlah_sks" id="sks" class="form-control">
+                    <input type="text" name="jumlah_sks" id="sks" class="form-control @error('jumlah_sks') is-invalid @enderror" value="{{ old('jumlah_sks') }}">
+                    @error('jumlah_sks')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <button class="btn btn-success">Simpan</button>
                 <a href="{{ route('matakuliah.index') }}" class="btn btn-primary">Kembali</a>
