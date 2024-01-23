@@ -45,6 +45,12 @@
                                 <p>Data Mata Kuliah</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('mahasiswa') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Data Mahasiswa</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>

@@ -37,6 +37,6 @@ Route::post('/postLogin', [AuthController::class, 'postLogin'])->name('postLogin
 Route::get('/data-mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa');
 Route::get('/create-mahasiswa', [MahasiswaController::class, 'create'])->name('mahasiswa.create');
 Route::get('/store-mahasiswa', [MahasiswaController::class, 'store'])->name('mahasiswa.store');
-Route::get('/edit-mahasiswa/{id}', [MahasiswaController::class, 'edit'])->name('mahasiswa.store');
+Route::get('/edit-mahasiswa/{id}', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
 Route::get('/update-mahasiswa/{id}', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
 Route::get('/delete-mahasiswa/{id}', [MahasiswaController::class, 'delete'])->name('mahasiswa.delete');
