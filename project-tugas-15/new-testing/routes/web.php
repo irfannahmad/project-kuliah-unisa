@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Mahasiswa;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MataKuliahController;
+use App\Http\Controllers\sendInformationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,3 +41,7 @@ Route::get('/store-mahasiswa', [MahasiswaController::class, 'store'])->name('mah
 Route::get('/edit-mahasiswa/{id}', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
 Route::get('/update-mahasiswa/{id}', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
 Route::get('/delete-mahasiswa/{id}', [MahasiswaController::class, 'delete'])->name('mahasiswa.delete');
+
+// Mail
+Route::get('/send-mail', [sendInformationController::class, 'index']);
+Route::get('/send-mail-to-users', [sendInformationController::class, 'sendEmailInformation']);
